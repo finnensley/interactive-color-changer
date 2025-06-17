@@ -8,9 +8,19 @@
         body {
             font-family: Arial, sans-serif;
             font-size: 18px;
-            text-align: center;
+            text-align: center; 
         }
 
+        .container {
+            display: flex; 
+            flex-direction: column;  
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            margin: auto;
+        }
+    
+        
         .color-btn {
             padding: 10px;
             margin: 5px;
@@ -18,17 +28,30 @@
             border: none;
         }
 
-        
+        .circle {
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%; 
+            background-color: lightgrey;
+            align-content: center;
+            
+        }
+
     </style>
 </head>
 <body>
-    <h1>Pick the color</h1>
-    <h2 class="circle">Circle</h2>
-    <button class="color-btn" data-colors="red">Red</button>
-    <button class="color-btn" data-colors="green">Green</button>
-    <button class="color-btn" data-colors="purple">Purple</button>
-    <button class="color-btn" data-colors="yellow">Yellow</button>
+    <h1>Pick the background color</h1>
+    <div class="container">
+        <div class="circle" id="circleID">Circle</div>
+    </div>
+    <button class="color-btn" data-color="red">Red</button>
+    <button class="color-btn" data-color="green">Green</button>
+    <button class="color-btn" data-color="purple">Purple</button>
+    <button class="color-btn" data-color="yellow">Yellow</button>
     <button id="reset">Reset</button>
+
     <script src="script.js"></script>
+    
 </body>
 </html>
